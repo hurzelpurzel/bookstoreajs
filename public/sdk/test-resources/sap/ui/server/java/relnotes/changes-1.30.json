@@ -1,0 +1,14 @@
+{
+  "1.30.0": {
+    "date": "April 2015",
+    "notes": [
+      {
+        "id": "c2d067b78d5e0c4f7651c143de47ab2b8065fc32",
+        "author": "Peter Muessig \u003cpeter.muessig@sap.com\u003e",
+        "type": "FIX",
+        "text": "ResourceServlet: Closing the JAR handles ensured",
+        "references": []
+      }
+    ]
+  }
+}

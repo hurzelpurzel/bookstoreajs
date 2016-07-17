@@ -1,0 +1,42 @@
+<mvc:View controllerName="pottmeier.bookstore.controller.CreateEntity" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form"
+	xmlns:footerbar="sap.ushell.ui.footerbar" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.m.semantic"
+	xmlns:smart="sap.ui.comp.smartfield" xmlns="sap.m">
+	<semantic:DetailPage id="page" navButtonPress="onNavBack" title="{viewModel>/viewTitle}" busy="{viewModel>/busy}">
+		<semantic:content>
+			<f:SimpleForm class="editableForm" columnsL="1" columnsM="1" editable="true" emptySpanL="4" emptySpanM="4" id="newEntitySimpleForm"
+				labelSpanL="3" labelSpanM="3" layout="ResponsiveGridLayout" maxContainerCols="2" minWidth="1024"
+				title="{= ${viewModel>/mode} === 'edit'? 'Edit pottmeier.bookstore.Book': 'New pottmeier.bookstore.Book'}">
+				<f:content>
+					<Label text="publish_date" required="false"/>
+					<DatePicker name="publish_date" value="{ path: 'publish_date', type: 'sap.ui.model.type.DateTime'}" id="publish_date_id" type="DateTime"
+						enabled="true" visible="true"/>
+					<Label text="author" required="false"/>
+					<Input name="author" id="author_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="true" visible="true"
+						value="{ path: 'author', type: 'sap.ui.model.odata.type.String' }"/>
+					<Label text="title" required="false"/>
+					<Input name="title" id="title_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="true" visible="true"
+						value="{ path: 'title', type: 'sap.ui.model.odata.type.String' }"/>
+					<Label text="description" required="false"/>
+					<Input name="description" id="description_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="true" visible="true"
+						value="{ path: 'description', type: 'sap.ui.model.odata.type.String' }"/>
+					<Label text="genre" required="false"/>
+					<Input name="genre" id="genre_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="true" visible="true"
+						value="{ path: 'genre', type: 'sap.ui.model.odata.type.String' }"/>
+					<Label text="price" required="false"/>
+					<Input name="price" id="price_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement" enabled="true" visible="true"
+						value="{ path: 'price', type: 'sap.ui.model.odata.type.String' }"/>
+					<Label text="id" required="true"/>
+					<Input name="id" id="id_id" valueLiveUpdate="true" liveChange="_validateSaveEnablement"
+						enabled="{= ${viewModel>/mode} === 'edit'? false: true}" visible="true"
+						value="{ path: 'id', type: 'sap.ui.model.odata.type.String' , constraints:{ nullable:false } }"/>
+				</f:content>
+			</f:SimpleForm>
+		</semantic:content>
+		<semantic:saveAction>
+			<semantic:SaveAction id="save" enabled="{viewModel>/enableCreate}" press="onSave"/>
+		</semantic:saveAction>
+		<semantic:cancelAction>
+			<semantic:CancelAction id="cancel" press="onCancel"></semantic:CancelAction>
+		</semantic:cancelAction>
+	</semantic:DetailPage>
+</mvc:View>

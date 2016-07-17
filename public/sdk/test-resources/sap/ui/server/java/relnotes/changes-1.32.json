@@ -1,0 +1,45 @@
+{
+  "1.32.0": {
+    "date": "August 2015",
+    "notes": [
+      {
+        "id": "a8c8743c75fdd67d23d6283d3a1c72b609db75e0",
+        "author": "Peter Muessig \u003cpeter.muessig@sap.com\u003e",
+        "type": "FEATURE",
+        "text": "MultiVersionFilter: support for tunneling HTML5 apps resources",
+        "references": []
+      },
+      {
+        "id": "66005e1184e953cde5c72f04f359a5897d333ef4",
+        "author": "Peter Muessig \u003cpeter.muessig@sap.com\u003e",
+        "type": "FEATURE",
+        "text": "RedirectFilter: added lightweight redirect filter",
+        "references": []
+      }
+    ]
+  },
+  "1.32.10": {
+    "date": "January 2016",
+    "notes": [
+      {
+        "id": "ecc116ff6ea26e6daa776d72d5a6fd915c85db9f",
+        "author": "Peter Muessig \u003cpeter.muessig@sap.com\u003e",
+        "type": "FIX",
+        "text": "AppCacheBusterFilter: prevent access of hidden servlet paths",
+        "references": []
+      }
+    ]
+  },
+  "1.32.16": {
+    "date": "May 2016",
+    "notes": [
+      {
+        "id": "074ab1fe8ee091114b657ff62c982541a8f65ac8",
+        "author": "Peter Muessig \u003cpeter.muessig@sap.com\u003e",
+        "type": "FIX",
+        "text": "MultiVersionFilter: usage of LRUCache as resource cache",
+        "references": []
+      }
+    ]
+  }
+}
